@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OmniSearch - AI Chat History Command Center</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar glass">
+      <div>
+        <p class="eyebrow">Personal AI Knowledge Hub</p>
+        <h1>OmniSearch</h1>
+      </div>
+      <div class="topbar-actions">
+        <span class="badge">Prototype</span>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar glass">
+        <nav>
+          <h2>Sections</h2>
+          <ul>
+            <li><a href="#search">Search</a></li>
+            <li><a href="#sources">Sources</a></li>
+            <li><a href="#imports">Imports</a></li>
+            <li><a href="#saved">Saved Results</a></li>
+            <li><a href="#settings">Settings</a></li>
+          </ul>
+        </nav>
+
+        <section id="sources" class="panel">
+          <h3>Sources</h3>
+          <div id="sourceFilters" class="filter-grid"></div>
+        </section>
+
+        <section class="panel">
+          <h3>Topic / Project Filters</h3>
+          <div id="topicFilters" class="filter-grid"></div>
+        </section>
+      </aside>
+
+      <section class="content">
+        <section id="search" class="glass panel">
+          <h2>Search</h2>
+          <p class="muted">Search keywords, topics, project names, and saved details across your AI chats.</p>
+          <div class="search-wrap">
+            <input id="searchInput" type="text" placeholder="Search all conversations (e.g. migration plan, release notes, pitch deck...)" />
+            <button id="clearBtn" class="ghost-btn" type="button">Clear</button>
+          </div>
+          <div class="results-meta">
+            <span id="resultsCount">0 results</span>
+          </div>
+        </section>
+
+        <section id="results" class="results-grid" aria-live="polite"></section>
+
+        <section id="imports" class="glass panel mini-panel">
+          <h2>Imports</h2>
+          <p class="muted">Connectors are mocked for this static prototype.</p>
+          <div class="pill-row">
+            <span class="pill">+ Import ChatGPT Export</span>
+            <span class="pill">+ Import Claude JSON</span>
+            <span class="pill">+ Import Gemini CSV</span>
+            <span class="pill">+ Import Copilot Notes</span>
+          </div>
+        </section>
+
+        <section id="saved" class="glass panel mini-panel">
+          <h2>Saved Results</h2>
+          <p class="muted">Bookmark high-value conversations for quick access.</p>
+          <ul class="saved-list">
+            <li>Q2 Product Launch Messaging</li>
+            <li>API Migration Checklist</li>
+            <li>Investor Deck Narrative</li>
+          </ul>
+        </section>
+
+        <section id="settings" class="glass panel mini-panel">
+          <h2>Settings</h2>
+          <p class="muted">Preferences are visual-only in this prototype.</p>
+          <div class="settings-grid">
+            <label><input type="checkbox" checked /> Highlight keyword matches</label>
+            <label><input type="checkbox" checked /> Sort by relevance score</label>
+            <label><input type="checkbox" /> Compact card density</label>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
